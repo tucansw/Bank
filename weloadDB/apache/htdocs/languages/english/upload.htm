@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Datei auf Memory-Stick ablegen</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 1.1.2  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Hartmut Karrasch">
+	<META NAME="CREATED" CONTENT="20041212;9462039">
+	<META NAME="CHANGEDBY" CONTENT="Hartmut Karrasch">
+	<META NAME="CHANGED" CONTENT="20041212;9503598">
+</HEAD>
+<BODY LANG="de-DE" BGCOLOR="#c0c0c0" DIR="LTR">
+<H1><FONT FACE="Arial, sans-serif">Uploading files and links into <b>WeLOAD</b>
+</FONT></H1>
+<P><BR><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=4 CELLSPACING=3>
+	<COL WIDTH=128*>
+	<COL WIDTH=128*>
+	<THEAD>
+		<TR VALIGN=TOP>
+			<TD WIDTH=50%>
+				<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=5>Uploading file</FONT></FONT></H1>
+				<FORM ACTION="upload.php" METHOD="POST" ENCTYPE="multipart/form-data">
+					<P><INPUT TYPE=FILE NAME="userfile" SIZE=16> 
+					</P>
+					<P><FONT FACE="Arial, sans-serif">Note:&nbsp;<INPUT TYPE=TEXT NAME="notes" SIZE=20>
+					</FONT>
+					</P>
+					<P><INPUT TYPE=SUBMIT VALUE="send"></P>
+				</FORM>
+				<P><BR>
+				</P>
+			</TD>
+			<TD WIDTH=50%>
+				<H2><FONT FACE="Arial, sans-serif">Posting a link</FONT></H2>
+				<FORM ACTION="upload2.php" METHOD="POST" ENCTYPE="multipart/form-data">
+					<P><FONT FACE="Arial, sans-serif">Internet-URL:&nbsp;<INPUT TYPE=TEXT NAME="upfile" SIZE=20>
+					</FONT>
+					</P>
+					<P><FONT FACE="Arial, sans-serif">Note:&nbsp;<INPUT TYPE=TEXT NAME="notes" SIZE=20>
+					</FONT>
+					</P>
+					<P><INPUT TYPE=SUBMIT VALUE="send"></P>
+				</FORM>
+			</TD>
+		</TR>
+	</THEAD>
+</TABLE>
+<P>
+</P>
+</BODY>
+</HTML>
