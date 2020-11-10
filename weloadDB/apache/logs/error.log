@@ -1,2 +1,8 @@
 [Mon Nov 09 10:02:39 2020] [error] [client 127.0.0.1] File does not exist: d:/datenbank server/weload/apache/htdocs/favicon.ico
 [Mon Nov 09 10:07:11 2020] [error] [client 127.0.0.1] File does not exist: d:/datenbank server/weload/apache/htdocs/favicon.ico
+[Tue Nov 10 13:16:26 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/favicon.ico
+[Tue Nov 10 15:54:24 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/mysql
+[Tue Nov 10 15:54:37 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/mysql
+[Tue Nov 10 16:17:08 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/apache/mysql
+[Tue Nov 10 16:17:13 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/apache/
+[Tue Nov 10 16:17:49 2020] [error] [client 127.0.0.1] File does not exist: c:/users/tholz/onedrive/dokumente/git/bank/weloaddb/apache/htdocs/apache

@@ -1,0 +1,34 @@
+CREATE TABLE accounts (
+    accID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cusID int NOT NULL,
+    credit float DEFAULT 0 NOT NULL,
+    creadetAt datetime DEFAULT "0000-00-00 00:00:00",
+    updatedAt datetime DEFAULT "0000-00-00 00:00:00",
+    deletedAt datetime DEFAULT "0000-00-00 00:00:00",
+    accName varchar(50) NOT NULL, 
+    accPassword char(64) NOT NULL
+); 
+
+CREATE TABLE customers(
+    cusID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    firstName varchar(50) NOT NULL,
+    lastName varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    tel varchar(59),
+    zip int NOT NULL,
+    street varchar(100) NOT NULL
+);
+
+CREATE TABLE transactions(
+    traID int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    fromAcc int UNSIGNED NOT NULL,
+    toAcc int UNSIGNED NOT NULL,
+    amount float UNSIGNED NOT NULL,
+    transferredAt datetime NOT NULL
+);
+
+CREATE TABLE zipCodes(
+    zip int NOT NULL PRIMARY KEY,
+    city varchar(100) NOT NULL,
+    country varchar(100) NOT NULL
+);
