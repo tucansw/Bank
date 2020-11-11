@@ -1,23 +1,15 @@
+import com.mysql.jdbc.*;
 import java.sql.*;
+import java.util.*;
 
 public class App {
-    public static void main(String[] args) {
 
-        try {
-
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql","root","my_password");  
-
-            Statement stmt = conn.createStatement();
-
-            ResultSet rs = stmt.executeQuery("select * from accounts");
-
-            while (rs.next()) {
-                System.out.println(rs.getString("accID"));
-            }
-
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+    public static void main(String[] args) throws Exception {
+        SqlConnection sqlc = new SqlConnection("localhost/Bank");
         
+        sqlc.req("SELECT * FROM accounts");
+
+        System.out.println(Arrays.toString(sqlc.getColumnNames()));
     }
+
 }
