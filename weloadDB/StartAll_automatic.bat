@@ -17,5 +17,5 @@ start weload-start.exe
 cd apache
 cd htdocs
 cd weload
-start start.htm
+
 EXIT

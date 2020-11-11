@@ -847,3 +847,15 @@
 127.0.0.1 - - [11/Nov/2020:17:15:48 +0100] "GET /phpMyAdmin/css/phpmyadmin.css.php?lang=de-iso-8859-1&js_frame=right&js_isDOM=1 HTTP/1.1" 200 12273
 127.0.0.1 - - [11/Nov/2020:17:20:13 +0100] "GET /phpMyAdmin/tbl_properties.php?lang=de-iso-8859-1&server=1&db=Bank&table=accounts&goto=tbl_properties.php&back=tbl_properties.php HTTP/1.1" 200 4266
 127.0.0.1 - - [11/Nov/2020:17:20:13 +0100] "GET /phpMyAdmin/css/phpmyadmin.css.php?lang=de-iso-8859-1&js_frame=right&js_isDOM=1 HTTP/1.1" 200 12273
+127.0.0.1 - - [11/Nov/2020:20:24:09 +0100] "POST /phpMyAdmin/read_dump.php HTTP/1.1" 200 5300
+127.0.0.1 - - [11/Nov/2020:20:24:09 +0100] "GET /phpMyAdmin/css/phpmyadmin.css.php?lang=de-iso-8859-1&js_frame=right&js_isDOM=1 HTTP/1.1" 200 12273
+127.0.0.1 - - [11/Nov/2020:20:27:03 +0100] "GET /phpMyAdmin/tbl_properties_structure.php?lang=de-iso-8859-1&server=1&db=Bank&table=customers HTTP/1.1" 200 7995
+127.0.0.1 - - [11/Nov/2020:20:27:03 +0100] "GET /phpMyAdmin/css/phpmyadmin.css.php?lang=de-iso-8859-1&js_frame=right&js_isDOM=1 HTTP/1.1" 200 12273
+127.0.0.1 - - [11/Nov/2020:21:30:08 +0100] "GET / HTTP/1.1" 200 43726
+127.0.0.1 - - [11/Nov/2020:21:30:08 +0100] "GET /index.php?=PHPE9568F34-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 4663
+127.0.0.1 - - [11/Nov/2020:21:30:08 +0100] "GET /index.php?=PHPE9568F35-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 2158
+127.0.0.1 - - [11/Nov/2020:21:30:12 +0100] "GET /8080 HTTP/1.1" 404 276
+127.0.0.1 - - [11/Nov/2020:21:31:25 +0100] "GET /8080 HTTP/1.1" 404 276
+127.0.0.1 - - [11/Nov/2020:21:31:29 +0100] "GET / HTTP/1.1" 200 43726
+127.0.0.1 - - [11/Nov/2020:21:31:29 +0100] "GET /index.php?=PHPE9568F35-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 2158
+127.0.0.1 - - [11/Nov/2020:21:31:29 +0100] "GET /index.php?=PHPE9568F34-D428-11d2-A769-00AA001ACF42 HTTP/1.1" 200 4663

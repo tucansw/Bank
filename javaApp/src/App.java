@@ -7,8 +7,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         SqlConnection sqlc = new SqlConnection("localhost/Bank");
         
+        JFrameGUI gui = new JFrameGUI();
+        // WebGUI webgui = new WebGUI();
+        
         sqlc.req("SELECT * FROM accounts");
-
         System.out.println(Arrays.toString(sqlc.getColumnNames()));
     }
 
