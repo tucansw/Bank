@@ -1,40 +1,23 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.FlowLayout;
+package com.GUI;
+
 import javax.swing.*;
-import java.sql.*;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.Color;
 
-public class JFrameGUI extends JFrame {
+public class Login {
 
-    JPanel panel;
-    JButton button;
-    JLabel usernameLabel, passwordLabel;
-    JTextField username, password;
-
-    public JFrameGUI() {
-        super("Bank");
-        setLookAndFeel();
-        setSize(600, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocation(200, 200);
-        setLocationRelativeTo(null);
-        setResizable(false);
-
-        getContentPane().setLayout(new FlowLayout());
-        
-        JPanel pnPanel0;
-        JButton btLogin;
-        JLabel lbUsername;
-        JLabel lbPassword;
-        JTextField tfUsername;
-        JTextField tfPassword;
-        JButton btCreateAccount;
-        JLabel lbMessage;
-
+    public static JPanel pnPanel0;
+    public static JButton btLogin;
+    public static JLabel lbUsername;
+    public static JLabel lbPassword;
+    public static JTextField tfUsername;
+    public static JTextField tfPassword;
+    public static JButton btCreateAccount;
+    public static JLabel lbMessage;
+    
+    public static JPanel panel() {
         pnPanel0 = new JPanel();
         GridBagLayout gbPanel0 = new GridBagLayout();
         GridBagConstraints gbcPanel0 = new GridBagConstraints();
@@ -102,7 +85,7 @@ public class JFrameGUI extends JFrame {
         gbPanel0.setConstraints( tfPassword, gbcPanel0 );
         pnPanel0.add( tfPassword );
 
-        btCreateAccount = new JButton( "Create account"  );
+        btCreateAccount = new JButton( "Create an account"  );
         gbcPanel0.gridx = 11;
         gbcPanel0.gridy = 11;
         gbcPanel0.gridwidth = 6;
@@ -127,63 +110,12 @@ public class JFrameGUI extends JFrame {
         gbPanel0.setConstraints( scpMessage, gbcPanel0 );
         pnPanel0.add( scpMessage );
 
-        getRootPane().setDefaultButton(btLogin);
-
-        setVisible(true);
-
-        btLogin.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent arg0) {
-                String username = tfUsername.getText();
-                String password = tfPassword.getText();
-                String hashedPassword = "";
-                int accID = -2;
-                int nameID = -1;
-                int pwID = -3;
-                System.out.println("Logging in with username: \"" + username + "\" and password: \"" + password + "\" ...");
-                ResultSet res;
-                res = App.sqlc.req("SELECT accID as res FROM accounts WHERE accName = \"" + username + "\"");
-                try {
-                    if (res.next()) {
-                        nameID = Integer.valueOf(res.getString("res"));
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                res = App.sqlc.req("SELECT md5(\"" + password + "\") as res");
-                try {
-                    if (res.next()) {
-                        hashedPassword = res.getString("res");
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                res = App.sqlc.req("SELECT accID as res FROM accounts WHERE accPassword = \"" + hashedPassword + "\"");
-                try {
-                    if (res.next()) {
-                        pwID = Integer.valueOf(res.getString("res"));
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-                if(pwID == nameID) {
-                    accID = pwID;
-                    System.out.println("Successfully logged in with account ID: " + accID);
-                    lbMessage.setText("Successfully logged in, " + username + "!");
-                } else {
-                    System.out.println("Account with given username and password not found!");
-                    lbMessage.setText("The username you’ve entered doesn’t match any account");
-                }
-            }
-        });
+        return pnPanel0;
     }
 
-    private void setLookAndFeel() {
-        try {
-            UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-        } catch (Exception e) {
-
-        }
+    public static void loginFail() {
+        Login.lbMessage.setText("<html>The username you’ve entered<br/>doesn’t match any account</html>");
+        Login.btLogin.setBorder(BorderFactory.createLineBorder(Color.red, 2));
     }
 
 }

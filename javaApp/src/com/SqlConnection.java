@@ -1,6 +1,6 @@
-import com.mysql.jdbc.*;
+package com;
+
 import java.sql.*;
-import java.util.*;
 
 public class SqlConnection {
 
