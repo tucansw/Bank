@@ -7,9 +7,10 @@ public class App {
 
     public static SqlConnection sqlc;
     public static void main(String[] args) throws Exception {
+        // Open a database connection via JDBC
         sqlc = new SqlConnection("localhost/Bank");
         
-        // Launch the new UI prototype parallel to the old one
+        // Start the UI
         SwingUtilities.invokeLater(() -> {
             final MainFrame mainFrame = new MainFrame();
             mainFrame.pack();

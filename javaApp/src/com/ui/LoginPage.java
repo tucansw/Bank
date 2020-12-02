@@ -10,8 +10,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 import javax.swing.*;
 
-import com.GUI.CreateAccount;
-
 class LoginPage extends Page {
     // Made final to avoid accidental override errors
     private final JTextField nameField = new JTextField(20);
@@ -91,7 +89,7 @@ class LoginPage extends Page {
     private void onCreateAccount() {
         // Open the dummy CreateAccount component in a new modal dialog
         final JDialog caDialog = new JDialog((JFrame) SwingUtilities.getRoot(this), "Sign Up", true);
-        // Wrap the panel in a ScrollPane
+        // Wrap the CreateAccount panel in a ScrollPane
         caDialog.add(new JScrollPane(CreateAccount.panel()));
         
         // Closing the dialog means completely disposing it
