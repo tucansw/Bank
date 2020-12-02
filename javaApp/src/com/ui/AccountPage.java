@@ -10,7 +10,7 @@ class AccountPage extends Page {
         super(session);
 
         // TODO Expand account view
-        add(new JLabel("Welcome, " + User.getUsername() "! Balance: " + User.getBalance()));
+        add(new JLabel("Welcome, " + User.getUsername() + "! Balance: " + User.getBalance()));
     }
 
 }
