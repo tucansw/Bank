@@ -1,13 +1,7 @@
 package com.ui;
 
-import java.util.Map;
-import java.util.HashMap;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.font.TextAttribute;
-import java.awt.Cursor;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseAdapter;
 import javax.swing.*;
 
 class LoginPage extends Page {
@@ -36,22 +30,9 @@ class LoginPage extends Page {
         // A simple FlowLayout for the link panel (with no horizontal gaps)
         linkPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 0, 5));
 
-        // TODO Move the Link component to its own class
-        final JLabel createAccountLink = new JLabel("Sign Up");
-        // Set the underline font
-        Map<TextAttribute, Integer> fontAttributes = new HashMap<TextAttribute, Integer>();
-        fontAttributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-        createAccountLink.setFont(createAccountLink.getFont().deriveFont(fontAttributes));
-        // Set the hand cursor
-        createAccountLink.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        // Add the mouse listener
-        createAccountLink.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                // Call the account creation handler
-                onCreateAccount();
-            }
-        });
+        // Create the 'Sign Up' link
+        final Link createAccountLink = new Link("Sign Up");
+        createAccountLink.setActionListener(e -> onCreateAccount());
 
         linkPanel.add(new JLabel("Don't have an account? "));
         linkPanel.add(createAccountLink);
